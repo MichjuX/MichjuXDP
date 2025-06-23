@@ -32,4 +32,4 @@ execute as @a if score @s dashCooldown matches 0..39 if score @s isSneaking matc
 execute as @a if score @s selectedSpell matches 2 if score @s isSneaking matches 1 unless score @s isDashing matches 1 run function dp:spell/spells/dash/execute_dash
 
 # Dodaje cooldown TYLKO dla gracza, który MA isDashing=1 (czyli właśnie użył dasza)
-execute as @a if score @s isDashing matches 1 run scoreboard players remove @s dashCooldown 1
+execute if score @s isDashing matches 1 run scoreboard players remove @s dashCooldown 1

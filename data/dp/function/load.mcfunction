@@ -1,5 +1,8 @@
 tellraw @a {text:"Loading datapack... ", color:"#ee720d", bold:true}
 
+# CLK
+scoreboard objectives add clock dummy
+
 scoreboard objectives add isSneaking custom:sneak_time
 scoreboard objectives add sneakTimer dummy
 scoreboard objectives add criteria dummy
@@ -25,5 +28,17 @@ scoreboard objectives add isShrinked dummy
 scoreboard objectives add shrinkOnCooldown dummy
 execute as @a run scoreboard players set @s isShrinked 0
 execute as @a run scoreboard players set @s shrinkOnCooldown 0
+
+# GreenSpell
+scoreboard objectives add green dummy
+scoreboard objectives add greenLoad dummy
+
+# Savepoint
+scoreboard objectives add saveLoad dummy
+scoreboard objectives add saveCooldown dummy
+scoreboard objectives add save dummy
+execute as @a run scoreboard players set @s saveLoad 0
+execute as @a run scoreboard players set @s saveCooldown 0
+
 
 tellraw @a {text:"Finished loading!", color:"green", bold:true}

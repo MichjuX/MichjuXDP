@@ -12,6 +12,7 @@ execute as @a if score @s spell_timer matches 20.. run scoreboard players set @s
 
 execute as @a run function dp:spell/execute
 execute as @a run function dp:spell/display_spell
+execute as @a run function dp:savepoint/saveload
 
 
 # Resetuj isSneaking
