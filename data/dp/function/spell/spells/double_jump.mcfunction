@@ -2,8 +2,8 @@
 execute as @a if score @s selectedSpell matches 1 run title @s actionbar {"translate":"dp.spell.double_jump","color":"dark_aqua"}
 
 #CHECK CRITERIA
-execute as @a at @s unless block ~ ~-0.2 ~ air run scoreboard players set @s criteria 0
-execute as @a at @s if block ~ ~-0.2 ~ air if score @s criteria matches 0 run scoreboard players set @s criteria 1
+execute as @a at @s unless block ~ ~-0.5 ~ air run scoreboard players set @s criteria 0
+execute as @a at @s if block ~ ~-0.5 ~ air if score @s criteria matches 0 run scoreboard players set @s criteria 1
 execute as @a if score @s isSneaking matches 1 if score @s criteria matches 1 run scoreboard players set @s criteria 2
 
 execute as @a if score @s isSneaking matches 1 if score @s criteria matches 2 run scoreboard players set $y player_motion.api.launch 6000
